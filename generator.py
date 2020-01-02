@@ -10,7 +10,7 @@ class SiameseDataGenerator(tf.keras.utils.Sequence):
         self.pairs_1 = self.pairs[:, 1]
 
         self.batch_size = batch_size
-        self.samples_per_train  = (self.pairs.shape[0]/self.batch_size)*self.batch_size
+        self.samples_per_train  = self.pairs.shape[0]
 
     def __len__(self):
         'Denotes the number of batches per epoch'
